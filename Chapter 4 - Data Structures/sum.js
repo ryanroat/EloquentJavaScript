@@ -1,9 +1,26 @@
-function range(start, end) {
+function range(start, end, step) {
     const array = [];
-    const size = end - start + 1;
+    let size = 0;
+    if (!step) {
+        size = end - start + 1;
+        for (let i = 0; i < size; i++) {
+            array[i] = start + i;
+        }
+        return array;
+    }
 
-    for (i = 0; i < size; i++) {
-        array[i] = start + i;
+    console.log(step);
+
+    if (step < 0) {
+        size = start - end + 1;
+        for (let i = 0; i < size / step; i++) {
+            array[i] = start - i * step;
+        }
+    } else {
+        size = end - start + 1;
+        for (let i = 0; i < size / step; i++) {
+            array[i] = start + i * step;
+        }
     }
 
     return array;
@@ -20,3 +37,5 @@ function sum(numArr) {
 
 console.log(range(5, 25));
 console.log(sum(range(1, 10)));
+console.log(range(1, 10, 2));
+console.log(range(5, 2, -1));
