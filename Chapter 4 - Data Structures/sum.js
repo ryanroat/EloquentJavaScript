@@ -36,7 +36,11 @@ function sum(numArr) {
     return total;
 }
 
+console.log('range(5, 25)');
 console.log(range(5, 25));
+console.log('sum(range(1, 10))');
 console.log(sum(range(1, 10)));
+console.log('range(1, 16, 5)');
 console.log(range(1, 16, 5));
+console.log('range(20, -10, -3)');
 console.log(range(20, -10, -3));
