@@ -9,12 +9,12 @@ function range(start, end, step) {
         return array;
     }
 
-    console.log(step);
+    // console.log(step);
 
     if (step < 0) {
         size = start - end + 1;
-        for (let i = 0; i < size / step; i++) {
-            array[i] = start - i * step;
+        for (let i = 0; i < size / -step; i++) {
+            array[i] = start + i * step;
         }
     } else {
         size = end - start + 1;
