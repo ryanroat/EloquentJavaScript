@@ -1,7 +1,11 @@
+// create numerical range array and sum all the values
+
 function range(start, end, step) {
-    // TODO: use push to build array
     const array = [];
     let size = 0;
+
+    // check if passed a step value
+
     if (!step) {
         size = end - start + 1;
         for (let i = 0; i < size; i++) {
@@ -10,7 +14,11 @@ function range(start, end, step) {
         return array;
     }
 
-    // console.log(step);
+    /*  if given step param
+        loop by step value
+        either positve or negative */
+
+    /* handle negative step first */
 
     if (step < 0) {
         size = (start - end + 1) / -step;
