@@ -2,10 +2,20 @@
     uses default parameter for step in case no step is passed in */
 
 function range(start, end, step = 1) {
+    /*  solution code shows a ternary op could be used to set
+    step defaut value +/-1 based on start being < or > end:
+    function range(start, end, step = start < end ? 1 : -1)  */
+
     const array = [];
     let size = 0;
 
-    /* handle negative step value first */
+    /*  solution code shows using push allows loop from start
+    to end by step rather than using i as array index:
+    if (step > 0) {
+        for (let i = start; i <= end; i += step) array.push(i);
+    } else {
+        for (let i = start; i >= end; i += step) array.push(i);
+    }  */
 
     if (step < 0) {
         size = (start - end + 1) / -step;
