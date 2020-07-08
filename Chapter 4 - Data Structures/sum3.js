@@ -20,10 +20,14 @@ function range(start, end, step = 1) {
 }
 
 function sum(numArr) {
-    const l = numArr.length;
+    // const l = numArr.length;
+    // for (i = 0; i < l; i++) {
+    //     total += numArr[i];
+    // }
+
     let total = 0;
-    for (i = 0; i < l; i++) {
-        total += numArr[i];
+    for (const val of numArr) {
+        total += val;
     }
     return total;
 }
