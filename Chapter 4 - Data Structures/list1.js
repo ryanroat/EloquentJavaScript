@@ -11,4 +11,26 @@ function arrayToList(array) {
     return list;
 }
 
+function listToArray(list) {
+    let array = [];
+    let index = 0;
+    console.log(list);
+
+    function addLITA(list) {
+        array[index] = list.value;
+        index++;
+        if (list.rest != null) {
+            return addLITA(list.rest);
+        } else return;
+    }
+
+    if (list.rest != null) {
+        addLITA(list);
+        // list = list.rest;
+    }
+    return array;
+}
+
 console.log(arrayToList([10, 20]));
+
+console.log(listToArray(arrayToList([10, 20, 30])));
